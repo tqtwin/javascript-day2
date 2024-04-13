@@ -115,3 +115,12 @@ console.log(replaceOperator(10, 30, 300)); // Output: Replace $ with * to obtain
 
 //ex6
 
+function findKthGreatest(arr, k) {
+    arr.sort((a, b) => b - a); // Sort the array in descending order
+    return arr[k - 1]; // Return the kth element
+}
+
+const array = [3, 7, 1, 10, 5];
+const k = 3;
+
+console.log(`The ${k}th greatest element is:`, findKthGreatest(array, k));
