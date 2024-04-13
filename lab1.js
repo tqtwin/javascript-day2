@@ -96,3 +96,22 @@ var reversedString = reverseString(originalString);
 console.log("Original string: " + originalString);
 console.log("Reversed string: " + reversedString);
 
+//ex5
+function replaceOperator(x, y, z) {
+    // Try each operator (+, -, *, /)
+    const operators = ['+', '-', '*', '/'];
+    for (let operator of operators) {
+        let expression = x + operator + y;
+        let result = eval(expression);
+        if (result === z) {
+            return `Replace $ with ${operator} to obtain ${expression} = ${z}`;
+        }
+    }
+    return "It is not possible to obtain the result by replacing $ with any of the four operators.";
+}
+
+// Example usage
+console.log(replaceOperator(10, 30, 300)); // Output: Replace $ with * to obtain 10*30 = 300
+
+//ex6
+
